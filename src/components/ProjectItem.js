@@ -26,7 +26,7 @@ const ProjectItemStyles = styled.div`
   }
   .projectItem__desc {
     font-size: 1.6rem;
-    font-family: 'RobotoMono Regular';
+    font-family: 'IBM Regular';
     margin-top: 1rem;
   }
   @media only screen and (max-width: 768px) {

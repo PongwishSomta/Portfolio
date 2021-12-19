@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/about-sec-img.png';
+import AboutImg from '../assets/images/pongwish2.png';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -76,13 +77,11 @@ export default function AboutSection() {
       <div className="container">
         <div className="aboutSection__left">
           <SectionTitle
-            subheading="Let me introduce myself"
+            subheading="ให้ผมแนะนำตัวเอง"
             heading="About Me"
           />
           <PText>
-            I am a freelance website designer and developer from Chittagong,
-            Bangladesh. I create professional websites. I love art and always
-            try to show unique views to the audience through my design.
+          ผมมีความคิดที่อยากจะสร้างเทคโนโลยีที่สามารถเปลี่ยนแปลงโลกให้มีความทันสมัยมากยิ่งขึ้น ยิ่งศึกษายิ่งสนุกและทำให้ผมอยากเรียนรู้ทางด้านนี้ต่อไปอย่างไม่มีที่สิ้นสุด
           </PText>
           <div className="aboutSection__buttons">
             <Button btnText="Works" btnLink="/projects" />

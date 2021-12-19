@@ -1,10 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import PText from '../components/PText';
-import Button from '../components/Button';
-import AboutImg from '../assets/images/about-page-img.png';
-import AboutInfoItem from '../components/AboutInfoItem';
-import ContactBanner from '../components/ContactBanner';
+/* eslint-disable quotes */
+/* eslint-disable prettier/prettier */
+import React from "react";
+import styled from "styled-components";
+import PText from "../components/PText";
+import Button from "../components/Button";
+import AboutImg from "../assets/images/pongwish1.png";
+import AboutInfoItem from "../components/AboutInfoItem";
+import ContactBanner from "../components/ContactBanner";
+import ProgressBar from "../components/ProgressBar";
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -47,9 +50,11 @@ const AboutPageStyles = styled.div`
   }
   .about__info__items {
     margin-top: 15rem;
+    display: flex;
   }
   .about__info__item {
     margin-bottom: 10rem;
+    flex: 6;
   }
   .about__info__heading {
     font-size: 3.6rem;
@@ -70,6 +75,27 @@ const AboutPageStyles = styled.div`
     .about__info__heading {
       font-size: 3rem;
     }
+    .about__info__items {
+      display: block;
+    }
+    .title {
+      font-size: 2rem;
+    }
+  }
+  .skill {
+    display: flex;
+    margin-top: 13px;
+  }
+  .title {
+    font-size: 2rem;
+    font-family: "IBM Bold";
+    margin-bottom: 0px;
+    flex: 6;
+  }
+  .level {
+    font-size: 1.8rem;
+    font-family: "IBM Regular";
+    flex: 6;
   }
 `;
 
@@ -81,82 +107,121 @@ export default function About() {
           <div className="top-section">
             <div className="left">
               <p className="about__subheading">
-                Hi, I am <span>Ayan Khan</span>
+                Hi, I am <span>Pongwish Somta</span>
               </p>
-              <h2 className="about__heading">A freelance Web developer</h2>
+              <h2 className="about__heading">A passionate App developer</h2>
               <div className="about__info">
                 <PText>
-                  I am from chittagong, Bangladesh. A place of beauty and
-                  nature. Since my childhood, i love art and design. I always
-                  try to design stuff with my unique point of view. I also love
-                  to create things that can be usefull to others.
+                  ผมเป็นเด็กยุคใหม่ที่โตมากับเทคโนโลยีและคอมพิวเตอร์ครั้งแรกที่ผมได้เริ่มใช้
+                  คอมพิวเตอร์คือสมัยเรียนมัธยมศึกษาตอนต้น เล่นเกมเหมือนกับเด็ก ๆ
+                  ทั่วไป วันหนึ่งผมมี โอกาสได้เห็นงานเปิดตัวการ์ดจอ
+                  ซึ่งถือเป็นเทคโนโลยีที่ทำให้โลกเปลี่ยนแปลงเป็นอย่างมาก
+                  ทำให้ผมเกิดความคิดที่อยากจะสร้างเทคโนโลยีที่เปลี่ยนแปลงโลกให้มีความทันสมัยมากยิ่งขึ้น
+                  ผมจึงมีความสนใจศึกษาและได้เรียนรู้ด้านคอมพิวเตอร์มากยิ่งขึ้น
+                  และการได้ศึกษา Computer Programming ทำให้ผมยิ่งชอบในด้านนี้มาก
                   <br /> <br />
-                  I started coding since I was in high school. Coding is also an
-                  art for me. I love it and now I have the opportunity to design
-                  along with the coding. I find it really interesting and I
-                  enjoyed the process a lot.
-                  <br />
-                  <br />
-                  My vision is to make the world a better place. Now almost
-                  everything is becoming better than ever. It is time for us to
-                  create more good stuff that helps the world to become a better
-                  place.
+                  ในด้าน Programming ผมมีความถนัดและชื่นชอบใน Mobile Application
+                  Programming โดยผมได้มีการ พัฒนา ตัวแอปพลิเคชันด้วย Flutter
+                  ซึ่งเป็นภาษาที่ใช้ในการพัฒนา Mobile Application และยังมีภาษา
+                  Kotlin ที่เป็น Mobile Application Programming และยังมีการพัฒนา
+                  Web Application ด้วย PHP และภาษาพื้นฐานในการProgramming ภาษา C
+                  ในการพัฒนา แอปพลิเคชัน เว็บ และระบบต่าง ๆ
+                  ทำให้ผมได้เรียนรู้เรื่อง Self Learning
+                  หรือการเรียนรู้ด้วยตัวเองที่ในโรงเรียนไม่
+                  ได้สอนในสิ่งที่ผมชอบและถนัด
+                  และยังสอนให้ผมได้รู้เข้าในปัญหาหาของการลงมือทำจริง การวางแผน
+                  การออกแบบ การปรับปรุงแก้ไข ต่าง ๆ ทำให้ผมได้เรียนรู้และเข้าใจ
+                  Programing อย่างแท้จริง
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="#" />
+              <Button btnText="Download folio" btnLink="#" />
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />
             </div>
           </div>
+
           <div className="about__info__items">
             <div className="about__info__item">
               <h1 className="about__info__heading">Education</h1>
 
               <AboutInfoItem
-                title="School"
-                items={['Nasirabad Govt. High School, Chattogram']}
+                title="มัธยมตอนปลาย"
+                items={["โรงเรียนยุพราชวิทยาลัย"]}
+                link="https://www.yupparaj.ac.th/"
               />
               <AboutInfoItem
-                title="Collage"
-                items={['BAF Shaheen College Chattogram']}
+                title="มัธยมตอนต้น"
+                items={["โรงเรียนยุพราชวิทยาลัย"]}
+                link="https://www.yupparaj.ac.th/"
               />
               <AboutInfoItem
-                title="Varsity"
-                items={['University Of Chitiagong']}
+                title="ประถมศึกษา"
+                items={["โรงเรียนอนุบาลเชียงใหม่"]}
+                link="https://abcm.ac.th/"
               />
             </div>
             <div className="about__info__item">
-              <h1 className="about__info__heading">My Skills</h1>
+              <h1
+                className="about__info__heading"
+                style={{ marginBottom: "30px" }}
+              >
+                My Skills
+              </h1>
 
-              <AboutInfoItem
-                title="FrontEnd"
-                items={['HTML', 'CSS', 'JavaScript', 'REACT']}
-              />
-              <AboutInfoItem
-                title="BackEnd"
-                items={['Node', 'Express', 'PHP']}
-              />
-              <AboutInfoItem
-                title="Design"
-                items={['Photoshop', 'After Effects', 'Figma']}
-              />
-            </div>
-            <div className="about__info__item">
-              <h1 className="about__info__heading">Experiences</h1>
+              <div className="skill">
+                <div className="title" style={{color:"#0d1f33"}}>Adobe Photoshop</div>
+                <div className="level" align="right">
+                  Excellent
+                </div>
+              </div>
 
-              <AboutInfoItem
-                title="2010-2012"
-                items={['junior developer at web Cifar']}
-              />
-              <AboutInfoItem
-                title="2012-2016"
-                items={['Front end developer at web Cifar ']}
-              />
-              <AboutInfoItem
-                title="2016-"
-                items={['Freelance web Developer']}
-              />
+              <ProgressBar bgcolor="#0d1f33" completed="80" />
+
+              <div className="skill">
+                <div className="title" style={{color:"#54c4f0"}}>Flutter</div>
+                <div className="level" align="right">
+                  Very good
+                </div>
+              </div>
+
+              <ProgressBar bgcolor="#54c4f0" completed="80" />
+
+              <div className="skill">
+                <div className="title" style={{color:"#b54298"}}>Kotlin</div>
+                <div className="level" align="right">
+                  Good
+                </div>
+              </div>
+
+              <ProgressBar bgcolor="#b54298" completed="60" />
+
+              <div className="skill">
+                <div className="title" style={{color:"#6b7db7"}}>PHP</div>
+                <div className="level" align="right">
+                  Basic
+                </div>
+              </div>
+
+              <ProgressBar bgcolor="#6b7db7" completed="50" />
+
+              <div className="skill">
+                <div className="title" style={{color:"#134680"}}>C</div>
+                <div className="level" align="right">
+                  Basic
+                </div>
+              </div>
+
+              <ProgressBar bgcolor="#134680" completed="50" />
+
+              <div className="skill">
+                <div className="title" style={{color:"#fdd34b"}}>Python</div>
+                <div className="level" align="right">
+                  Basic
+                </div>
+              </div>
+
+              <ProgressBar bgcolor="#fdd34b" completed="50" />
             </div>
           </div>
         </div>

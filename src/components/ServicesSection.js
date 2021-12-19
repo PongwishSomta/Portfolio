@@ -1,5 +1,7 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import { MdDesktopMac, MdCode, MdPhonelinkSetup } from 'react-icons/md';
+import { MdDesktopMac,  MdPhonelinkSetup } from 'react-icons/md';
+import { SiBlockchaindotcom } from 'react-icons/si';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
@@ -27,21 +29,21 @@ export default function ServicesSection() {
   return (
     <ServicesItemsStyles>
       <div className="container">
-        <SectionTitle subheading="What i will do for you" heading="Services" />
+        <SectionTitle subheading="สิ่งที่ผมสนใจ" heading="Interested" />
         <div className="services__allItems">
           <ServicesSectionItem
             icon={<MdDesktopMac />}
-            title="web design"
+            title="web dev"
             desc="I do ui/ux design for the website that helps website to get a unique look."
           />
           <ServicesSectionItem
-            icon={<MdCode />}
-            title="web dev"
+            icon={<MdPhonelinkSetup />}
+            title="app dev"
             desc="I also develop the websites. I create high performance website with blazing fast speed."
           />
           <ServicesSectionItem
-            icon={<MdPhonelinkSetup />}
-            title="app Dev"
+            icon={<SiBlockchaindotcom />}
+            title="blockchain"
             desc="I develop mobile application. I create mobile app with eye catching ui. "
           />
         </div>

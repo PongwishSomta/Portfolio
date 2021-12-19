@@ -10,7 +10,7 @@ const NavStyles = styled.nav`
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--dark-bg);
+  background: var(--new-bg);
   ul {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,6 +20,7 @@ const NavStyles = styled.nav`
       display: inline-block;
       border-radius: 8px;
       transition: 0.3s ease background-color;
+
       &:hover {
         background-color: var(--deep-dark);
       }
@@ -33,7 +34,7 @@ const NavStyles = styled.nav`
       outline: none;
     }
     .active {
-      color: var(--white);
+      color: var(--orange);
     }
   }
   .mobile-menu-icon {

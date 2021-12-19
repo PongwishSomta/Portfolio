@@ -1,6 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import PText from './PText';
+/* eslint-disable quotes */
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable prettier/prettier */
+import React from "react";
+import styled from "styled-components";
+import PText from "./PText";
 
 const AboutItemStyles = styled.div`
   display: flex;
@@ -11,6 +14,7 @@ const AboutItemStyles = styled.div`
   margin-top: 3rem;
   .title {
     font-size: 2.4rem;
+    font-family: "IBM Bold";
   }
   .items {
     display: flex;
@@ -38,8 +42,9 @@ const AboutItemStyles = styled.div`
 `;
 
 export default function AboutInfoItem({
-  title = 'Title',
-  items = ['HTML', 'CSS'],
+  title = "Title",
+  items = ["HTML", "CSS"],
+  link = "Link",
 }) {
   return (
     <AboutItemStyles>
@@ -47,7 +52,9 @@ export default function AboutInfoItem({
       <div className="items">
         {items.map((item, index) => (
           <div className="item" key={index}>
-            <PText>{item}</PText>
+            <a href={link} target="_blank">
+              <PText>{item}</PText>
+            </a>
           </div>
         ))}
       </div>

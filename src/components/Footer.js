@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
@@ -23,7 +24,7 @@ const FooterStyle = styled.div`
     margin-bottom: 1rem;
   }
   .copyright {
-    background-color: var(--dark-bg);
+    background-color: var(--new-bg);
     text-align: left;
     padding: 1rem 0;
     margin-top: 5rem;
@@ -56,12 +57,11 @@ export default function Footer() {
   return (
     <FooterStyle>
       <div className="container">
-        <div className="footer__col1">
-          <h1 className="footer__col1__title">Ayan Khan</h1>
+        <div className="footer__col1"> 
+          <h1 className="footer__col1__title">Pongwish Somta</h1>
           <PText>
-            A freelance web designer and developer from Chittagong, Bangladesh.
-            I always make websites that have unique designs and also has a good
-            performance rate.
+          ผมมีความคิดที่อยากจะสร้างเทคโนโลยีที่สามารถเปลี่ยนแปลงโลกให้มีความทันสมัยมากยิ่งขึ้น ยิ่งศึกษายิ่งสนุกและทำให้ผมอยากเรียนรู้ทางด้านนี้ต่อไปอย่างไม่มีที่สิ้นสุด
+
           </PText>
         </div>
         <div className="footer__col2">
@@ -96,16 +96,12 @@ export default function Footer() {
             heading="Contact Info"
             links={[
               {
-                title: '+88012312',
-                path: 'tel:+88012312',
+                title: '0936080909',
+                path: 'tel:0815302047',
               },
               {
-                title: 'webcifar@gmail.com',
-                path: 'mailto:webcifar@gmail.com',
-              },
-              {
-                title: 'GEC Circle, Chittagong, Bangladesh',
-                path: 'http://google.com/maps',
+                title: 'pongwish.so@gmail.com',
+                path: 'mailto:pongwish.so@gmail.com',
               },
             ]}
           />
@@ -116,15 +112,11 @@ export default function Footer() {
             links={[
               {
                 title: 'Facebook',
-                path: 'http://facebook.com',
+                path: 'https://www.facebook.com/profile.php?id=100017968987340',
               },
               {
-                title: 'Twitter',
-                path: 'http://twitter.com',
-              },
-              {
-                title: 'Instagram',
-                path: 'http://instagram.com',
+                title: 'Github',
+                path: 'https://github.com/PongwishSomta',
               },
             ]}
           />
@@ -133,10 +125,11 @@ export default function Footer() {
       <div className="copyright">
         <div className="container">
           <PText>
-            © 2021 - Ayan Khan | Designed By{' '}
-            <a target="_blank" rel="noreferrer" href="http://webcifar.com">
+            © 2021 Copyright - Pongwish Somta  {' '}
+            {/* <a target="_blank" rel="noreferrer" href="http://webcifar.com">
               web cifar
             </a>{' '}
+          */}
           </PText>
         </div>
       </div>

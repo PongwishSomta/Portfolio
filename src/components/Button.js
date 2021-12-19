@@ -12,7 +12,7 @@ const ButtonStyle = styled.div`
     border: 2px solid var(--gray-1);
     border-radius: 8px;
     display: inline-block;
-    color: ${(props) => (props.outline ? 'var(--gary-1)' : 'black')};
+    color: ${(props) => (props.outline ? 'var(--gray-1)' : 'var(--new-bg)')};
   }
   @media only screen and (max-width: 768px) {
     .button {

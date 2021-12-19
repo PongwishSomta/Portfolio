@@ -1,9 +1,10 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/images/hero.png';
+import PongwishImg from '../assets/images/pongwish.png';
 import Button from './Button';
-import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
-import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
+import SocialMediaArrow from '../assets/images/social-media-arrow.png';
+import ScrollDownArrow from '../assets/images/scroll-down-arrow.png';
 import PText from './PText';
 
 const HeroStyles = styled.div`
@@ -26,9 +27,11 @@ const HeroStyles = styled.div`
       width: 100%;
     }
     .hero__name {
-      font-family: 'Montserrat SemiBold';
+      font-family: "Montserrat Bold";
       font-size: 7rem;
-      color: var(--white);
+      color: var(--orange);
+      text-shadow: -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000,
+        -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
     }
   }
   .hero__img {
@@ -37,6 +40,7 @@ const HeroStyles = styled.div`
     height: 600px;
     margin: 0 auto;
     border: 2px solid var(--gray-1);
+    border-radius: 20px;
   }
   .hero__info {
     margin-top: -18rem;
@@ -145,6 +149,15 @@ const HeroStyles = styled.div`
       }
     }
   }
+
+  .white {
+    font-family: "IBM Bold";
+    color: var(--new-bg);
+  }
+  .caption {
+    text-shadow: -0.8px -0.8px 0 #262626, 0.8px -0.8px 0 #262626,
+      -0.8px 0.8px 0 #262626, 0.8px 0.8px 0 #262626;
+  }
 `;
 
 export default function HeroSection() {
@@ -154,17 +167,21 @@ export default function HeroSection() {
         <div className="container">
           <h1 className="hero__heading">
             <span>Hello, This is</span>
-            <span className="hero__name">Ayan Khan</span>
+            <span className="hero__name">Pongwish Somta</span>
           </h1>
           <div className="hero__img">
-            <img src={HeroImg} alt="" />
+            <img src={PongwishImg} style={{ borderRadius: '20px' }} alt="" />
           </div>
           <div className="hero__info">
-            <PText>
-              I am working as a freelance web designer and developer for 4
-              years. I love to design and make new web experiences for the
-              people.
-            </PText>
+            <div className="caption">
+              <PText>
+                <span className="white">
+                  ผมมีความคิดที่อยากจะสร้างเทคโนโลยีที่สามารถเปลี่ยนแปลงโลกให้มีความทันสมัยมากยิ่งขึ้น
+                  ยิ่งศึกษายิ่งสนุกและทำให้ผมอยากเรียนรู้ทางด้านนี้ต่อไปอย่างไม่มีที่สิ้นสุด
+                </span>
+              </PText>
+            </div>
+
             <Button btnText="see my works" btnLink="/projects" />
           </div>
           <div className="hero__social">
@@ -176,7 +193,7 @@ export default function HeroSection() {
               <ul>
                 <li>
                   <a
-                    href="http://facebook.com/webcifar"
+                    href="https://www.facebook.com/profile.php?id=100017968987340"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -185,29 +202,11 @@ export default function HeroSection() {
                 </li>
                 <li>
                   <a
-                    href="http://twitter.com/webcifar"
+                    href="https://github.com/PongwishSomta"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    TW
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://isntagram.com/web_cifar"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    IG
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://webcifar.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    LI
+                    GH
                   </a>
                 </li>
               </ul>

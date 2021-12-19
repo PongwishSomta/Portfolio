@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MapImg from '../assets/images/map.png';
+import MapImg from '../assets/images/map1.png';
 import PText from './PText';
 
 const MapStyles = styled.div`
@@ -49,10 +49,10 @@ export default function Map() {
       <div className="container">
         <div className="map__card">
           <h3 className="map__card__heading">Here is me</h3>
-          <PText>GEC circle, Chittagong, Bangladesh</PText>
+          <PText>Yupparaj Wittayalai School, Chiang mai, Thailand</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/GEC+More,+Chittagong/@22.3590818,91.8195583,17z/data=!3m1!4b1!4m5!3m4!1s0x30acd89aaa8239cd:0x6e65fa00001dd59f!8m2!3d22.3590715!4d91.8215486"
+            href="https://www.google.co.th/maps/place/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A2%E0%B8%B8%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2/@18.7910805,98.9877456,18z/data=!4m5!3m4!1s0x30da3a9830806b95:0xc08c7caffa89adf2!8m2!3d18.7909072!4d98.9880286"
             target="_blank"
             rel="noreferrer"
           >
