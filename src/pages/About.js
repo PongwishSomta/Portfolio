@@ -9,6 +9,7 @@ import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
 import ProgressBar from "../components/ProgressBar";
 
+
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
 
@@ -134,7 +135,9 @@ export default function About() {
                   Programing อย่างแท้จริง
                 </PText>
               </div>
-              <Button btnText="Download folio" btnLink="#" />
+    
+                <Button btnText="Download folio"  />
+         
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />

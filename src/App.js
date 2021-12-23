@@ -7,6 +7,10 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import Memo from './pages/Memo';
+import Cmsmart from './pages/Cmsmart';
+import Edocument from './pages/Edocument';
+import Certificates from './pages/Certificates';
 
 export default function App() {
   return (
@@ -21,8 +25,20 @@ export default function App() {
           <Route path="/contact">
             <Contact />
           </Route>
+          <Route path="/certificates">
+            <Certificates />
+          </Route>
           <Route path="/projects">
             <Projects />
+          </Route>
+          <Route path="/memo">
+            <Memo />
+          </Route>
+          <Route path="/cmsmart">
+            <Cmsmart />
+          </Route>
+          <Route path="/edocument">
+            <Edocument />
           </Route>
           <Route path="/">
             <Home />

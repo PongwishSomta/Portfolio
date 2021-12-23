@@ -85,6 +85,11 @@ export default function Footer() {
               },
               {
                 type: 'Link',
+                title: 'Certificates',
+                path: '/certificates',
+              },
+              {
+                type: 'Link',
                 title: 'Contact',
                 path: '/contact',
               },
