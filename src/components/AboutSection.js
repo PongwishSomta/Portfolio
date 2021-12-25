@@ -84,8 +84,8 @@ export default function AboutSection() {
           ผมมีความคิดที่อยากจะสร้างเทคโนโลยีที่สามารถเปลี่ยนแปลงโลกให้มีความทันสมัยมากยิ่งขึ้น ยิ่งศึกษายิ่งสนุกและทำให้ผมอยากเรียนรู้ทางด้านนี้ต่อไปอย่างไม่มีที่สิ้นสุด
           </PText>
           <div className="aboutSection__buttons">
-            <Button btnText="Works" btnLink="/projects" />
-            <Button btnText="Read More" btnLink="/about" outline />
+            <Button btnText="ผลงาน" btnLink="/projects" />
+            <Button btnText="อ่านเพิ่มเติม" btnLink="/about" outline />
           </div>
         </div>
         <div className="aboutSection__right">

@@ -182,7 +182,7 @@ export default function HeroSection() {
               </PText>
             </div>
 
-            <Button btnText="see my works" btnLink="/projects" />
+            <Button btnText="ดูผลงาน" btnLink="/projects" />
           </div>
           <div className="hero__social">
             <div className="hero__social__indicator">
