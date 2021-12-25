@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
-import CatImg from '../assets/images/cat.gif';
+import CatImg from '../assets/images/cat1.gif';
 import ContactBanner from '../components/ContactBanner';
 
 const ComingStyle = styled.div`
@@ -16,10 +16,11 @@ const ComingStyle = styled.div`
   .subtitle{
     font-family: 'IBM Regular';
       font-size:20px;
-      margin-bottom: 10rem;
+      margin-bottom: 15rem;
   }
   .cat__img{
-      width:400px;
+      margin-top: 15rem;
+      width: 500px;
   }
   @media only screen and (max-width: 768px) {
   }
