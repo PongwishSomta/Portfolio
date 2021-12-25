@@ -11,6 +11,7 @@ import Memo from './pages/Memo';
 import Cmsmart from './pages/Cmsmart';
 import Edocument from './pages/Edocument';
 import Certificates from './pages/Certificates';
+import Coming from './pages/Coming';
 
 export default function App() {
   return (
@@ -39,6 +40,9 @@ export default function App() {
           </Route>
           <Route path="/edocument">
             <Edocument />
+          </Route>
+          <Route path="/coming">
+            <Coming />
           </Route>
           <Route path="/">
             <Home />
