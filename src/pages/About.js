@@ -5,6 +5,8 @@ import styled from "styled-components";
 import PText from "../components/PText";
 import Button from "../components/Button";
 import AboutImg from "../assets/images/pongwish1.png";
+import YrcLogo from "../assets/images/yrc_logo.png";
+import AbcmLogo from "../assets/images/abcm_logo.png";
 import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
 import ProgressBar from "../components/ProgressBar";
@@ -98,6 +100,10 @@ const AboutPageStyles = styled.div`
     font-family: "IBM Regular";
     flex: 6;
   }
+  .logo{
+    max-width: 10%;
+    height: 12%
+  }
 `;
 
 export default function About() {
@@ -147,18 +153,20 @@ export default function About() {
           <div className="about__info__items">
             <div className="about__info__item">
               <h1 className="about__info__heading">Education</h1>
-
               <AboutInfoItem
+                logo={YrcLogo}
                 title="มัธยมตอนปลาย"
                 items={["โรงเรียนยุพราชวิทยาลัย"]}
                 link="https://www.yupparaj.ac.th/"
               />
               <AboutInfoItem
+                logo={YrcLogo}
                 title="มัธยมตอนต้น"
                 items={["โรงเรียนยุพราชวิทยาลัย"]}
                 link="https://www.yupparaj.ac.th/"
               />
               <AboutInfoItem
+                logo={AbcmLogo}
                 title="ประถมศึกษา"
                 items={["โรงเรียนอนุบาลเชียงใหม่"]}
                 link="https://abcm.ac.th/"

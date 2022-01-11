@@ -4,6 +4,7 @@
 import React from "react";
 import styled from "styled-components";
 import PText from "./PText";
+import schoolLogo from "../assets/images/yrc_logo.png";
 
 const AboutItemStyles = styled.div`
   display: flex;
@@ -27,6 +28,10 @@ const AboutItemStyles = styled.div`
     padding: 1rem;
     border-radius: 8px;
   }
+  .logo {
+    max-width: 10%;
+    margin-left: 20px;
+  }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -45,11 +50,14 @@ export default function AboutInfoItem({
   title = "Title",
   items = ["HTML", "CSS"],
   link = "Link",
+  logo = { schoolLogo },
 }) {
   return (
     <AboutItemStyles>
       <h1 className="title">{title}</h1>
       <div className="items">
+      <img src={logo} className="logo" alt="logo" />
+
         {items.map((item, index) => (
           <div className="item" key={index}>
             <a href={link} target="_blank">

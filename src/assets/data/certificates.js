@@ -12,6 +12,11 @@ import cer9 from '../images/cer9.jpg';
 import cer10 from '../images/cer10.jpg';
 import cer11 from '../images/cer11.jpg';
 import cer12 from '../images/cer12.jpg';
+import cer13 from '../images/cer13.png';
+import cer14 from '../images/cer14.png';
+import cer15 from '../images/cer15.png';
+import cer16 from '../images/cer16.jpg';
+import cer17 from '../images/cer17.jpg';
 
 
 const certificates = [
@@ -20,12 +25,6 @@ const certificates = [
         img: cer1,
         title: 'ได้รับทุนสนับสนุนโครงการในการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 23',
         desc: 'สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ และสำนักงานการวิจัยแห่งชาติ',
-      },
-      {
-        id: uuidv4(),
-        img: cer2,
-        title: 'ปฏิบัติหน้าที่ประธานฝ่ายกีฬาและกรีฑาในกิจกรรมการแข่งขันกีฬาและกรีฑาคณะสี',
-        desc: 'โรงเรียนยุพราชวิทยาลัย',
       },
       {
         id: uuidv4(),
@@ -41,24 +40,6 @@ const certificates = [
       },
       {
         id: uuidv4(),
-        img: cer5,
-        title: 'เข้าร่วมการอบรมโครงการฝึกอบรมการพัฒนาแหล่งน้ำและระบบจัดการน้ำอย่างบูรณาการ',
-        desc: '',
-      },
-      {
-        id: uuidv4(),
-        img: cer6,
-        title: 'เข้าร่วมโครงการเผยแพร่ความรู้เกี่ยวกับการเมืองการปกครอง บทบาทหน้าที่และอำนาจของฝ่ายนิติบัญญัติ',
-        desc: 'สำนักงานเลขาธิการวุฒิสภา',
-      },
-      {
-        id: uuidv4(),
-        img: cer7,
-        title: 'เข้าร่วมอบรม "ค่ายยุพราชดรุณธรรม"',
-        desc: 'คณะสงฆ์จังหวัดเชียงใหม่',
-      },
-      {
-        id: uuidv4(),
         img: cer8,
         title: 'เป็นคณะกรรมการดำเนินการจัดการอบรมหลักสูตรโอลิมปิกวิชาการ ค่าย 1 สอวน. วิชา คอมพิวเตอร์',
         desc: 'โครงการศูนย์โอลิมปิกวิชาการ',
@@ -69,6 +50,39 @@ const certificates = [
         title: 'ได้รับรางวัลชนะเลิศ The Best Mobile App โครงการพัฒนาศักยภาพเยาวชนทางด้านเทคโนโลยีสารสนเทศ',
         desc: 'มหาวิทยาลัยแม่โจ้',
       },
+      {
+        id: uuidv4(),
+        img: cer13,
+        title: 'จบคอร์ส Intro to Machine Learning',
+        desc: 'kaggle',
+      },
+      {
+        id: uuidv4(),
+        img: cer14,
+        title: 'จบคอร์ส demonstrating theoretical and practical understanding of Python Core',
+        desc: 'sololearn',
+      },
+      {
+        id: uuidv4(),
+        img: cer15,
+        title: 'จบคอร์ส demonstrating theoretical and practical understanding of Kotlin',
+        desc: 'sololearn',
+      },
+      {
+        id: uuidv4(),
+        img: cer16,
+        title: 'เข้าร่วมการแข่งขัน Shopee Code League 2020 ',
+        desc: 'Shopee',
+      },
+      {
+        id: uuidv4(),
+        img: cer17,
+        title: 'เข้าร่วมการแข่งขันการทำนายความสามารถในการดูดซับก๊าซ CO2 ของสารประกอบโครงข่ายโลหะ-สารอินทรีย์',
+        desc: 'มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี',
+      },
+      
+
+
       {
         id: uuidv4(),
         img: cer10,
@@ -87,6 +101,36 @@ const certificates = [
         title: 'สำเร็จการฝึกอบรมค่ายวิทยาศาสตร์ หลักสูตร "เทคนิคปฏิบัติการทางวิทยาศาสตร์"',
         desc: 'คณะวิทยาศาสตร์ มหาวิทยาลัยเชียงใหม่',
       },
+
+
+      {
+        id: uuidv4(),
+        img: cer2,
+        title: 'ปฏิบัติหน้าที่ประธานฝ่ายกีฬาและกรีฑาในกิจกรรมการแข่งขันกีฬาและกรีฑาคณะสี',
+        desc: 'โรงเรียนยุพราชวิทยาลัย',
+      },
+      
+     
+      {
+        id: uuidv4(),
+        img: cer5,
+        title: 'เข้าร่วมการอบรมโครงการฝึกอบรมการพัฒนาแหล่งน้ำและระบบจัดการน้ำอย่างบูรณาการ',
+        desc: '',
+      },
+      {
+        id: uuidv4(),
+        img: cer6,
+        title: 'เข้าร่วมโครงการเผยแพร่ความรู้เกี่ยวกับการเมืองการปกครอง บทบาทหน้าที่และอำนาจของฝ่ายนิติบัญญัติ',
+        desc: 'สำนักงานเลขาธิการวุฒิสภา',
+      },
+      {
+        id: uuidv4(),
+        img: cer7,
+        title: 'เข้าร่วมอบรม "ค่ายยุพราชดรุณธรรม"',
+        desc: 'คณะสงฆ์จังหวัดเชียงใหม่',
+      },
+      
+     
       
 ];
 

@@ -39,12 +39,12 @@ export default function ServicesSection() {
           <ServicesSectionItem
             icon={<MdPhonelinkSetup />}
             title="app dev"
-            desc="I also develop the websites. I create high performance website with blazing fast speed."
+            desc="I develop mobile application. I create mobile app with eye catching ui."
           />
           <ServicesSectionItem
             icon={<SiBlockchaindotcom />}
             title="blockchain"
-            desc="I develop mobile application. I create mobile app with eye catching ui. "
+            desc="I would like to study and develop a blockchain system that can be used by the general public. "
           />
         </div>
       </div>
