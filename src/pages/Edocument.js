@@ -1,18 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
-import PText from '../components/PText';
 import SectionTitle from '../components/SectionTitle';
 
 
 
 import 'swiper/swiper-bundle.min.css';
 
-// install Swiper modules
-SwiperCore.use([Navigation]);
-SwiperCore.use([Autoplay]);
 
 
 const CmStyle = styled.div`
