@@ -1,17 +1,26 @@
+/* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import styled from 'styled-components';
-import SectionTitle from '../components/SectionTitle';
+import React from "react";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
+import PText from "../components/PText";
+import SectionTitle from "../components/SectionTitle";
+import ScrollDownArrow from "../assets/images/scroll-down-arrow.png";
+import Edoc1 from "../assets/images/edoc.jpg";
 
 
+import "swiper/swiper-bundle.min.css";
 
-import 'swiper/swiper-bundle.min.css';
+// install Swiper modules
+SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay]);
 
-
-
-const CmStyle = styled.div`
+const EdocStyle = styled.div`
   padding: 10rem 0;
- 
+  .container {
+    max-width: 1000px;
+  }
   .top-section {
     display: flex;
     align-items: center;
@@ -31,9 +40,12 @@ const CmStyle = styled.div`
     color: var(--orange);
   }
   .project__img {
-    max-width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
-  
+    border: 2px solid var(--gray-1);
+    border-radius: 20px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   .contactBanner__wrapper {
     background-color: var(--deep-dark);
@@ -86,15 +98,8 @@ const CmStyle = styled.div`
       max-height: 70px;
     }
   }
-  .col-6 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 5rem;
-    margin-top: 7rem;
-  }
   .swiper-container {
-      margin-top: 2rem;
-    padding-top: 7rem;
+    padding-top: 3rem;
     max-width: 100%;
   }
   .swiper-button-prev,
@@ -118,8 +123,16 @@ const CmStyle = styled.div`
   .swiper-button-next::after {
     font-size: 2rem;
   }
-  .swipe__img{
-      max-width:90%;
+  .port {
+    border-radius: 8px;
+  }
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .certi_item {
+    margin-top: 15px;
   }
   @media only screen and (max-width: 1208px) {
     .hero__scrollDown {
@@ -127,16 +140,102 @@ const CmStyle = styled.div`
     }
   }
   @media only screen and (max-width: 768px) {
+    .port {
+      height: 350px;
+    }
+    .certi_desc {
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .screenshot {
+      display: none;
+    }
   }
 `;
 
-export default function Cmsmart() {
+export default function Edocument() {
   return (
-    <CmStyle>
+    <EdocStyle>
       <div className="container">
-      <SectionTitle heading="E-DOCUMENT" subheading="ระบบเอกสารอัจฉริยะ" />
-       
+        <SectionTitle
+          heading="E-document"
+          subheading="ระบบดูแลผู้ป่วยอัลไซเมอร์"
+        />
+
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+          }}
+          navigation
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 1200px
+            1200: {
+              slidesPerView: 1,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <img
+              src={Edoc1}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
+          </SwiperSlide>
+        </Swiper>
+
+        <div className="hero__scrollDown">
+          <p>Scroll</p>
+          <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+        </div>
+        <div className="project__info">
+          <PText>
+            <h2 className="project__heading">รายละเอียดโดยย่อ</h2>
+            E-document เป็นระบบเอกสารอัจริยะที่พัฒนาขึ้นมาเพื่อแก้ไขปัญหาการเรื่องเอกสารที่ในงานราชการมักจะมีปัญหาที่เอกสารคำสั่งต่าง
+            ๆ ที่ออกมากว่าจะถึงผู้รับสารมีเวลา
+            นานและเป็นการใช้กระดาษอย่างสิ้นเปลือง โดยพัฒนาร่วมกับเทคโนโลยี thai
+            nlp ของ AI FOR THAI ออกมาเป็น เว็บแอปพลิเคชัน และแอปพลิเคชันเพื่อ
+            ใช้งาน โดยเริ่มทดลองใน ชุมนุมยุวคอมพิวเตอร์โรงเรียนยุพราชวิทยาลัย
+          </PText>
+        </div>
+
+
+        <div className="contactBanner__wrapper">
+          <h5 className="contactBanner__heading">
+            <span className="orange">หน้าที่</span> :
+            รับหน้าที่พัฒนาตัวแอพพลิเคชั่น YRC E-document
+          </h5>
+          <p className="description">
+            โดย APPLICATION YRC E-document ถูกพัฒนาขึ้นด้วย Kotlin
+            เพราะมีประสิทธิภาพและสามารถพัฒนาได้มากในเวลาที่สั้น
+            และฐานข้อมูลกลางเป็น Firebase
+            ที่มีขนาดและรูปแบบการรับข้อมูลหลายรูปแบบ
+          </p>
+        </div>
+
+        <div className="project__info">
+          <PText>
+            <h2 className="project__heading" style={{ marginTop: "5rem" }}>
+              รางวัลความสำเร็จ
+            </h2>
+
+            เข้าร่วมการแข่งขัน Thailand ICT Award (TICTA 2020)
+ชื่อผลงาน ระบบสารบรรณคำสั่งอิเล็คทรอนิกส์อัจฉริยะ โดยประยุกต์ใช้งานแพลตฟอร์มปัญญาประดิษฐ์สัญชาติไทย
+          </PText>
+        </div>
       </div>
-    </CmStyle>
+    </EdocStyle>
   );
 }

@@ -134,6 +134,7 @@ const CmStyle = styled.div`
   }
   .swipe__img{
       max-width:90%;
+      margin: 0 auto;
   }
   @media only screen and (max-width: 1208px) {
     .hero__scrollDown {

@@ -1,24 +1,26 @@
+/* eslint-disable quotes */
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Autoplay } from 'swiper';
-import PText from '../components/PText';
-import SectionTitle from '../components/SectionTitle';
-import ScrollDownArrow from '../assets/images/scroll-down-arrow.png';
-import MemoImg1 from '../assets/images/memo1.jpeg';
-import MemoImg2 from '../assets/images/memo2.gif';
-import MemoImg3 from '../assets/images/memo3.gif';
-import MemoImg4 from '../assets/images/memo4.jpg';
-import MemoImg5 from '../assets/images/memo5.jpg';
-import Nsc from '../assets/images/cer1.jpg';
+import React from "react";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
+import PText from "../components/PText";
+import SectionTitle from "../components/SectionTitle";
+import ScrollDownArrow from "../assets/images/scroll-down-arrow.png";
+import MemoImg1 from "../assets/images/memo1.jpeg";
+import MemoImg2 from "../assets/images/memo2.gif";
+import MemoImg3 from "../assets/images/memo3.gif";
+import MemoImg4 from "../assets/images/memo4.jpg";
+import MemoImg5 from "../assets/images/memo5.jpg";
+import Nsc from "../assets/images/cer1.jpg";
+import cer19 from "../assets/images/cer19.jpg";
+import cer20 from "../assets/images/cer20.jpg";
 
-import 'swiper/swiper-bundle.min.css';
+import "swiper/swiper-bundle.min.css";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
 SwiperCore.use([Autoplay]);
-
 
 const MemoStyle = styled.div`
   padding: 10rem 0;
@@ -102,12 +104,6 @@ const MemoStyle = styled.div`
       max-height: 70px;
     }
   }
-  .certificate {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 5rem;
-    margin-top: 5rem;
-  }
   .swiper-container {
     padding-top: 3rem;
     max-width: 100%;
@@ -133,12 +129,34 @@ const MemoStyle = styled.div`
   .swiper-button-next::after {
     font-size: 2rem;
   }
+  .port {
+    border-radius: 8px;
+  }
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .certi_item {
+    margin-top: 15px;
+  }
   @media only screen and (max-width: 1208px) {
     .hero__scrollDown {
       display: none;
     }
   }
   @media only screen and (max-width: 768px) {
+    .port {
+      height: 350px;
+    }
+    .certi_desc {
+      font-size: 19px;
+      line-height: 1.5;
+    }
+   
+    .screenshot {
+      display: none;
+    }
   }
 `;
 
@@ -153,8 +171,8 @@ export default function Memo() {
           slidesPerView={1}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: true
-        }}
+            disableOnInteraction: true,
+          }}
           navigation
           breakpoints={{
             // when window width is >= 640px
@@ -172,49 +190,46 @@ export default function Memo() {
           }}
         >
           <SwiperSlide>
-          <img
-          src={MemoImg1}
-          className="project__img"
-          style={{ borderRadius: '20px' }}
-          alt=""
-        />
+            <img
+              src={MemoImg1}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-          <img
-          src={MemoImg2}
-          className="project__img"
-          style={{ borderRadius: '20px' }}
-          alt=""
-        />
+            <img
+              src={MemoImg2}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-          <img
-          src={MemoImg3}
-          className="project__img"
-          style={{ borderRadius: '20px' }}
-          alt=""
-        />
+            <img
+              src={MemoImg3}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-          <img
-          src={MemoImg4}
-          className="project__img"
-          style={{ borderRadius: '20px' }}
-          alt=""
-        />
+            <img
+              src={MemoImg4}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-          <img
-          src={MemoImg5}
-          className="project__img"
-          style={{ borderRadius: '20px' }}
-          alt=""
-        />
+            <img
+              src={MemoImg5}
+              className="project__img"
+              style={{ borderRadius: "20px" }}
+              alt=""
+            />
           </SwiperSlide>
-          
         </Swiper>
-
-      
 
         <div className="hero__scrollDown">
           <p>Scroll</p>
@@ -267,19 +282,38 @@ export default function Memo() {
 
         <div className="project__info">
           <PText>
-            <h2 className="project__heading" style={{ marginTop: '5rem' }}>
+            <h2 className="project__heading" style={{ marginTop: "5rem" }}>
               รางวัลความสำเร็จ
             </h2>
-            <strong>ได้รับทุนสนับสนุนโครงการ รอบข้อเสนอโครงการและได้รับทุนสนับสนุน
-            รอบนำเสนอผลงาน </strong>การแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย
-            ครั้งที่ 23 (NSC 2021) หมวดโปรแกรมเพื่อการประยุกต์การใช้งาน
-            ระดับนักเรียน รหัสโครงการ22p23n0082
+
+          
+            <img src={Nsc} className="port" alt="certificate" />
+                <p className="certi_desc">
+                  ได้รับทุนสนับสนุน รอบนำเสนอผลงาน
+                  การแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 23
+                  (NSC 2021) หมวดโปรแกรมเพื่อการประยุกต์การใช้งาน
+                </p>
+
+            <div className="certificates">
+              <div className="certi_item">
+                <img src={cer19} className="port" alt="certificate" />
+                <p className="certi_desc">
+                  ได้รับรางวัลเหรียญทอง การประกวดโครงงานวิทยาศาสตร์
+                  สาขาเทคโนโลยี
+                </p>
+              </div>
+              <div className="certi_item">
+                <img src={cer20} className="port" alt="certificate" />
+                <p className="certi_desc">
+                  ได้รับรางวัลเหรียญทอง การประกวดโครงงานสะเต็มศึกษา
+                  ประเภทนำเสนอด้วยโปสเตอร์ในระบบออนไลน์
+                </p>
+              </div>
+     
+             
+            </div>
           </PText>
         </div>
-
-        <img src={Nsc} alt="certificate" />
-
-       
       </div>
     </MemoStyle>
   );

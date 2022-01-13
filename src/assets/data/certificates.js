@@ -17,6 +17,9 @@ import cer14 from '../images/cer14.png';
 import cer15 from '../images/cer15.png';
 import cer16 from '../images/cer16.jpg';
 import cer17 from '../images/cer17.jpg';
+import cer18 from '../images/cer18.jpg';
+import cer19 from '../images/cer19.jpg';
+import cer20 from '../images/cer20.jpg';
 
 
 const certificates = [
@@ -32,6 +35,19 @@ const certificates = [
         title: 'เข้าร่วมการแข่งขันการเขียนโปรแกรมคอมพิวเตอร์ งานสัปดาห์วิทยาศาสตร์แห่งชาติ',
         desc: 'คณะวิทยาศาสตร์ มหาวิทยาลัยเชียงใหม่',
       },
+      {
+        id: uuidv4(),
+        img: cer19,
+        title: 'ได้รับรางวัลเหรียญทอง การประกวดโครงงานวิทยาศาสตร์ (Student Science Project Contest) สาขาเทคโนโลยี ระดับมัธยมปลาย',
+        desc: 'สำนักงานเลขาธิการสภาการศึกษา',
+      },
+      {
+        id: uuidv4(),
+        img: cer20,
+        title: 'ได้รับรางวัลเหรียญทอง การประกวดโครงงานสะเต็มศึกษา ประเภทนำเสนอด้วยโปสเตอร์ในระบบออนไลน์ ระดับมัธยมศึกษาตอนปลาย',
+        desc: 'สำนักงานเลขาธิการสภาการศึกษา',
+      },
+
       {
         id: uuidv4(),
         img: cer4,
@@ -129,7 +145,12 @@ const certificates = [
         title: 'เข้าร่วมอบรม "ค่ายยุพราชดรุณธรรม"',
         desc: 'คณะสงฆ์จังหวัดเชียงใหม่',
       },
-      
+      {
+        id: uuidv4(),
+        img: cer18,
+        title: 'เป็นอาสาสมัครในกิจกรรม "ขุดลอกดินโคลนในร่องน้ำริมถนนขึ้นดอยสุเทพ"',
+        desc: 'สภาลมหายใจเชียงใหม่',
+      },
      
       
 ];

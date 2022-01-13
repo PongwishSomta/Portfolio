@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { v4 as uuidv4 } from 'uuid';
-import CoinTrackerImg from '../images/cointracker.jpg';
 import MemoImg from '../images/memo.jpg';
 import CmImg from '../images/cmsmart.jpg';
+import EdocumentImg from '../images/edoc-ui.jpg';
 
 
 const projects = [
@@ -27,7 +27,7 @@ const projects = [
     name: 'YRC E-document',
     desc:
       'ระบบเอกสารอัจฉริยะที่พัฒนาขึ้นมาเพื่อแก้ไขปัญหาเรื่องเอกสารในงานราชการโดยพัฒนาร่วมกับเทคโนโลยี thai nlp ของ AI FOR THAI',
-    img: CoinTrackerImg,
+    img: EdocumentImg,
     link: '/edocument'
   },
 ];
