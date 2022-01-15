@@ -7,8 +7,11 @@ import SwiperCore, { Navigation, Autoplay } from "swiper";
 import PText from "../components/PText";
 import SectionTitle from "../components/SectionTitle";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.png";
-import Edoc1 from "../assets/images/edoc.jpg";
-
+import edoc from "../assets/images/edoc.jpg";
+import edoc1 from "../assets/images/edoc1.png";
+import edoc2 from "../assets/images/edoc2.png";
+import edoc3 from "../assets/images/edoc3.png";
+import edoc4 from "../assets/images/edoc4.png";
 
 import "swiper/swiper-bundle.min.css";
 
@@ -44,7 +47,6 @@ const EdocStyle = styled.div`
     margin: 0 auto;
     border: 2px solid var(--gray-1);
     border-radius: 20px;
-    margin-top: 5rem;
     margin-bottom: 5rem;
   }
   .contactBanner__wrapper {
@@ -99,7 +101,7 @@ const EdocStyle = styled.div`
     }
   }
   .swiper-container {
-    padding-top: 3rem;
+    padding-top: 7rem;
     max-width: 100%;
   }
   .swiper-button-prev,
@@ -188,7 +190,7 @@ export default function Edocument() {
         >
           <SwiperSlide>
             <img
-              src={Edoc1}
+              src={edoc}
               className="project__img"
               style={{ borderRadius: "20px" }}
               alt=""
@@ -203,14 +205,14 @@ export default function Edocument() {
         <div className="project__info">
           <PText>
             <h2 className="project__heading">รายละเอียดโดยย่อ</h2>
-            E-document เป็นระบบเอกสารอัจริยะที่พัฒนาขึ้นมาเพื่อแก้ไขปัญหาการเรื่องเอกสารที่ในงานราชการมักจะมีปัญหาที่เอกสารคำสั่งต่าง
+            E-document
+            เป็นระบบเอกสารอัจริยะที่พัฒนาขึ้นมาเพื่อแก้ไขปัญหาการเรื่องเอกสารที่ในงานราชการมักจะมีปัญหาที่เอกสารคำสั่งต่าง
             ๆ ที่ออกมากว่าจะถึงผู้รับสารมีเวลา
             นานและเป็นการใช้กระดาษอย่างสิ้นเปลือง โดยพัฒนาร่วมกับเทคโนโลยี thai
             nlp ของ AI FOR THAI ออกมาเป็น เว็บแอปพลิเคชัน และแอปพลิเคชันเพื่อ
             ใช้งาน โดยเริ่มทดลองใน ชุมนุมยุวคอมพิวเตอร์โรงเรียนยุพราชวิทยาลัย
           </PText>
         </div>
-
 
         <div className="contactBanner__wrapper">
           <h5 className="contactBanner__heading">
@@ -230,11 +232,72 @@ export default function Edocument() {
             <h2 className="project__heading" style={{ marginTop: "5rem" }}>
               รางวัลความสำเร็จ
             </h2>
-
-            เข้าร่วมการแข่งขัน Thailand ICT Award (TICTA 2020)
-ชื่อผลงาน ระบบสารบรรณคำสั่งอิเล็คทรอนิกส์อัจฉริยะ โดยประยุกต์ใช้งานแพลตฟอร์มปัญญาประดิษฐ์สัญชาติไทย
+            เข้าร่วมการแข่งขัน Thailand ICT Award (TICTA 2020) ชื่อผลงาน
+            ระบบสารบรรณคำสั่งอิเล็คทรอนิกส์อัจฉริยะ
+            โดยประยุกต์ใช้งานแพลตฟอร์มปัญญาประดิษฐ์สัญชาติไทย
           </PText>
         </div>
+
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: true,
+          }}
+          navigation
+          breakpoints={{
+            // when window width is >= 0px
+            0: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 4,
+            },
+            // when window width is >= 1200px
+            1200: {
+              slidesPerView: 4,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <img
+              src={edoc1}
+              className="swipe__img"
+              style={{ borderRadius: "15px" }}
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={edoc2}
+              className="swipe__img"
+              style={{ borderRadius: "15px" }}
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={edoc3}
+              className="swipe__img"
+              style={{ borderRadius: "15px" }}
+              alt=""
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={edoc4}
+              className="swipe__img"
+              style={{ borderRadius: "15px" }}
+              alt=""
+            />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </EdocStyle>
   );

@@ -3,7 +3,7 @@
 import React from "react";
 import styled from "styled-components";
 import PText from "../components/PText";
-import Button from "../components/Button";
+import DownloadButton from "../components/DownloadButton";
 import AboutImg from "../assets/images/pongwish1.png";
 import YrcLogo from "../assets/images/yrc_logo.png";
 import AbcmLogo from "../assets/images/abcm_logo.png";
@@ -142,7 +142,7 @@ export default function About() {
                 </PText>
               </div>
     
-                <Button btnText="Download folio"  />
+                <DownloadButton btnText="Download folio" btnLink="/profile.pdf"  />
          
             </div>
             <div className="right">

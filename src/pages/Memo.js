@@ -15,6 +15,7 @@ import MemoImg5 from "../assets/images/memo5.jpg";
 import Nsc from "../assets/images/cer1.jpg";
 import cer19 from "../assets/images/cer19.jpg";
 import cer20 from "../assets/images/cer20.jpg";
+import proposal from "../assets/images/proposal.pdf";
 
 import "swiper/swiper-bundle.min.css";
 
@@ -153,7 +154,7 @@ const MemoStyle = styled.div`
       font-size: 19px;
       line-height: 1.5;
     }
-   
+
     .screenshot {
       display: none;
     }
@@ -266,6 +267,14 @@ export default function Memo() {
             ที่สามารถช่วยแก้ไขปัญหาโรคอัลไซล์เมอร์ได้
           </PText>
         </div>
+        <div className="project__info" >
+          <iframe
+            src={`${proposal}#view=fitH`}
+            title="testPdf"
+            height="800px"
+            width="100%"
+          />
+        </div>
 
         <div className="contactBanner__wrapper">
           <h5 className="contactBanner__heading">
@@ -286,13 +295,12 @@ export default function Memo() {
               รางวัลความสำเร็จ
             </h2>
 
-          
             <img src={Nsc} className="port" alt="certificate" />
-                <p className="certi_desc">
-                  ได้รับทุนสนับสนุน รอบนำเสนอผลงาน
-                  การแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 23
-                  (NSC 2021) หมวดโปรแกรมเพื่อการประยุกต์การใช้งาน
-                </p>
+            <p className="certi_desc">
+              ได้รับทุนสนับสนุน รอบนำเสนอผลงาน
+              การแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์แห่งประเทศไทย ครั้งที่ 23 (NSC
+              2021) หมวดโปรแกรมเพื่อการประยุกต์การใช้งาน
+            </p>
 
             <div className="certificates">
               <div className="certi_item">
@@ -309,11 +317,10 @@ export default function Memo() {
                   ประเภทนำเสนอด้วยโปสเตอร์ในระบบออนไลน์
                 </p>
               </div>
-     
-             
             </div>
           </PText>
         </div>
+        
       </div>
     </MemoStyle>
   );
